@@ -1,0 +1,41 @@
+# Cortex Guard Configuration
+
+# Detection thresholds (0.0 - 1.0)
+thresholds:
+  prompt_injection: 0.7
+  jailbreak: 0.8
+  pii: 0.6
+  toxicity: 0.75
+
+# Enable/disable specific checks
+checks:
+  prompt_injection: true
+  jailbreak: true
+  pii_detection: true
+  toxicity: true
+  custom_rules: true
+
+# Logging
+logging:
+  level: INFO
+  log_blocked: true
+  log_safe: false
+
+# Custom rules (regex patterns)
+custom_rules:
+  - pattern: "ignore (all )?previous (instructions|prompts)"
+    threat_type: "prompt_injection"
+    severity: "high"
+  - pattern: "you are now in (DAN|developer) mode"
+    threat_type: "jailbreak"
+    severity: "critical"
+  - pattern: "\\b\\d{3}-\\d{2}-\\d{4}\\b"
+    threat_type: "pii_ssn"
+    severity: "high"
+
+# Action on detection
+action:
+  block: true
+  log: true
+  alert: false
+
