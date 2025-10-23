@@ -44,11 +44,11 @@ python test_api.py
 
 The demo includes several pre-configured test cases:
 
-- ✅ **Safe prompts** - Normal, benign user inputs
-- ⚠️ **Prompt injection attempts** - Malicious instructions embedded in prompts
-- 🚫 **Jailbreak attempts** - Attempts to bypass safety measures
-- 🔒 **PII leakage** - Inputs containing sensitive personal information
-- ☠️ **Toxic content** - Harmful or inappropriate language
+-  **Safe prompts** - Normal, benign user inputs
+-  **Prompt injection attempts** - Malicious instructions embedded in prompts
+-  **Jailbreak attempts** - Attempts to bypass safety measures
+- **PII leakage** - Inputs containing sensitive personal information
+- **Toxic content** - Harmful or inappropriate language
 
 ## Architecture
 
